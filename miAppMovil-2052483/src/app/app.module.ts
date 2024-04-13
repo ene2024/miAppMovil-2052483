@@ -6,10 +6,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NuevoComponenteComponent } from './nuevo-componente/nuevo-componente.component';
+import { TareasComponent } from './tareas/tareas.component';
+import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
 
 @NgModule({
-  declarations: [AppComponent, NuevoComponenteComponent],
+  declarations: [AppComponent, TareasComponent, AgregarTareaComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
