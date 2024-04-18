@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tarea } from 'src/Tarea';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {}
+
+  task: Tarea = {
+    Name: '',
+    Month: 1,
+    Year: 1,
+    Description: '',
+  }
+
+  enlistNewTask($event: any){
+    this.task = $event;
+  }
+
 }

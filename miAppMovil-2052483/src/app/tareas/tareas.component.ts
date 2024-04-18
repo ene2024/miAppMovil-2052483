@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tarea } from 'src/Tarea';
 
 @Component({
   selector: 'app-tareas',
@@ -11,20 +12,24 @@ export class TareasComponent  implements OnInit {
 
   ngOnInit() {}
 
-  tareas : any = [
-    {
-      nombre: "arturo",
-      ap1: "garza",
-      ap2: "rodriguez"
-    },
-  ];
-/*
-  addTask(title: string, date: string, description: string): void{
-    alert("Im here");
-  }*/
-
-  addTask(): void{
-    alert("Im here");
+  enlistNewTask(tarea: Tarea){
+    this.tareas.push(tarea);
   }
+
+  @Input() task: Tarea = {
+    Name: '',
+    Month: 1,
+    Year: 1,
+    Description: '',
+  }
+
+  tareas : Tarea[] = [
+    {
+      Name: 'Hola',
+      Month: 1,
+      Year: 1,
+      Description: 'Arturo'
+    }
+  ]
 
 }
