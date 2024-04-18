@@ -8,19 +8,19 @@ import { Tarea } from 'src/Tarea';
 })
 export class TareasComponent  implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {}
-
-  enlistNewTask(tarea: Tarea){
-    this.tareas.push(tarea);
-  }
-
   @Input() task: Tarea = {
     Name: '',
     Month: 1,
     Year: 1,
     Description: '',
+  } //EL ENLACE ES CORRECTO, FALTA PODER HACER PUSH DE ESTE DATO RECIBIDO
+
+  constructor() { }
+
+  ngOnInit() {}
+
+  addNewTask(){
+    this.tareas.push(this.task);
   }
 
   tareas : Tarea[] = [

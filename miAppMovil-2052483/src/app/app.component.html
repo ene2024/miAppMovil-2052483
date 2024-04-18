@@ -1,6 +1,6 @@
 <ion-app>
   <!--ion-router-outlet></ion-router-outlet-->
+  <app-tareas [task]="task"></app-tareas>  <!-- INPUT Y OUTPUT PRUEBA-->
   <app-agregar-tarea (enlistTask)="enlistNewTask($event)"></app-agregar-tarea>
-  <app-tareas [task]="task"></app-tareas>
   <!--app-agregar-tarea></app-agregar-tarea-->
 </ion-app>
