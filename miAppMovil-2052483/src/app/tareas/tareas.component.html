@@ -15,21 +15,27 @@
         <ion-card-title>{{note.Name}}</ion-card-title>
         <ion-card-subtitle><b>Fecha: </b>{{note.Month}}/{{note.Year}}</ion-card-subtitle>
       </ion-card-header>
-    
+
       <ion-card-content>
         {{note.Description}}
       </ion-card-content>
 
-      <ion-button><span><b>+ Ver mas detalles</b></span></ion-button>
+      <ion-button id="details"><span><b>+ Ver mas detalles</b></span></ion-button>
     </ion-card>
   </ion-list>
 
 </ion-content>
 
 <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-  <ion-fab-button color="secondary">
+  <ion-fab-button color="secondary" id="addNewAssignment">
     <ion-icon name="add"></ion-icon>
   </ion-fab-button>
 </ion-fab>
+
+<ion-modal trigger="addNewAssignment">
+  <ng-template>
+    <app-agregar-tarea></app-agregar-tarea>
+  </ng-template>
+</ion-modal>
 
 </div>

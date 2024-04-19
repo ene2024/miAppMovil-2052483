@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Tarea } from 'src/Tarea';
 
 @Component({
@@ -14,6 +14,7 @@ export class AgregarTareaComponent  implements OnInit {
 
   addTask(task: Tarea){
     this.enlistTask.emit(task);
+    alert("Im here: 1");
   }
 
   ////

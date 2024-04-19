@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Tarea } from 'src/Tarea';
 
 @Component({
@@ -24,6 +24,18 @@ export class TareasComponent  implements OnInit {
   }
 
   tareas : Tarea[] = [
+    {
+      Name: 'Hola',
+      Month: 1,
+      Year: 1,
+      Description: 'Arturo'
+    },
+    {
+      Name: 'Hola',
+      Month: 1,
+      Year: 1,
+      Description: 'Arturo'
+    },
     {
       Name: 'Hola',
       Month: 1,

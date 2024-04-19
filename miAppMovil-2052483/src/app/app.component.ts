@@ -18,6 +18,7 @@ export class AppComponent {
 
   enlistNewTask($event: any){
     this.task = $event;
+    alert("Im here: 2");
   }
-
+  
 }
