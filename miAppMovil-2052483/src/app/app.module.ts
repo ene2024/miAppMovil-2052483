@@ -7,7 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TareasComponent } from './tareas/tareas.component';
-import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
+import { AgregarTareaComponent } from './tareas/agregar-tarea/agregar-tarea.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

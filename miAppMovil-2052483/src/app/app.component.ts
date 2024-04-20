@@ -8,7 +8,7 @@ import { Tarea } from 'src/Tarea';
 })
 export class AppComponent {
   constructor() {}
-
+  /*
   task: Tarea = {
     Name: '',
     Month: 1,
@@ -19,6 +19,6 @@ export class AppComponent {
   enlistNewTask($event: any){
     this.task = $event;
     alert("Im here: 2");
-  }
+  }*/
   
 }

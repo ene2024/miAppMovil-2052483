@@ -15,8 +15,8 @@
     
     <ion-text><b>Fecha estimada en que se completará: </b></ion-text>
     <ion-list>
-      <ion-item class="selector" name="month" [(ngModel)]="newTarea.Month">
-        <ion-select required placeholder="MES">
+      <ion-item class="selector">
+        <ion-select placeholder="MES" name="Month" [(ngModel)]="newTarea.Month">
           <ion-select-option value="01">Enero</ion-select-option>
           <ion-select-option value="02">Febrero</ion-select-option>
           <ion-select-option value="03">Marzo</ion-select-option>
@@ -32,8 +32,8 @@
         </ion-select>
       </ion-item>
 
-      <ion-item required class="selector" name="year" [(ngModel)]="newTarea.Year">
-        <ion-select placeholder="AÑO">
+      <ion-item class="selector">
+        <ion-select placeholder="AÑO" name="Year" [(ngModel)]="newTarea.Year">
           <ion-select-option value="2024">2024</ion-select-option>
           <ion-select-option value="2025">2025</ion-select-option>
           <ion-select-option value="2026">2026</ion-select-option>
@@ -57,10 +57,3 @@
   </form>
 
 </ion-content>
-
-<ion-fab slot="fixed" vertical="bottom" horizontal="center">
-  <ion-fab-button color="secondary" (click)="logTask()">
-  <!--ion-fab-button color="secondary" (click)="addTask(newTarea)"-->
-    Agregar
-  </ion-fab-button>
-</ion-fab>

@@ -37,3 +37,12 @@ ion-button{
 ion-modal{
     width: 100%;
 }
+
+#formButton{
+    background-color: #3ec6e7;
+    border-style: dashed;
+    border-radius: 10px;
+    width: 30vw;
+    margin-bottom: 10px;
+    --box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+}

@@ -8,32 +8,14 @@ import { Tarea } from 'src/Tarea';
 })
 export class AgregarTareaComponent  implements OnInit {
 
-  ////
-
-  @Output() enlistTask = new EventEmitter <Tarea>();
-
-  addTask(task: Tarea){
-    this.enlistTask.emit(task);
-    alert("Im here: 1");
-  }
-
-  ////
-
   newTarea: Tarea = {
     Name: '',
-    Month: 1,
-    Year: 1,
+    Month: -1,
+    Year: -1,
     Description: '',
   }
-
-  tareas: Tarea[] = [];
 
   constructor() { }
 
   ngOnInit() {}
-
-  logTask(){
-    alert(this.newTarea.Month);
-  }
-
 }

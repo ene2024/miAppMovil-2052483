@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Tarea } from 'src/Tarea';
+import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
 
 @Component({
   selector: 'app-tareas',
@@ -8,40 +9,19 @@ import { Tarea } from 'src/Tarea';
 })
 export class TareasComponent  implements OnInit {
 
-  @Input() task: Tarea = {
-    Name: '',
-    Month: 1,
-    Year: 1,
-    Description: '',
-  } //EL ENLACE ES CORRECTO, FALTA PODER HACER PUSH DE ESTE DATO RECIBIDO
+  @ViewChild(AgregarTareaComponent) child: any;
+
+  agregarTarea(){
+    this.tareas.push(this.child.newTarea);
+  }
 
   constructor() { }
 
   ngOnInit() {}
 
-  addNewTask(){
-    this.tareas.push(this.task);
+  tareas : Tarea[] = [  ];
+
+  showDetails(description: string){
+    alert(description);
   }
-
-  tareas : Tarea[] = [
-    {
-      Name: 'Hola',
-      Month: 1,
-      Year: 1,
-      Description: 'Arturo'
-    },
-    {
-      Name: 'Hola',
-      Month: 1,
-      Year: 1,
-      Description: 'Arturo'
-    },
-    {
-      Name: 'Hola',
-      Month: 1,
-      Year: 1,
-      Description: 'Arturo'
-    }
-  ]
-
 }
