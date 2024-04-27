@@ -1,6 +1,4 @@
 
-
-
 ion-toolbar{
     --background: #BB27A7;
     color: white;
@@ -45,4 +43,23 @@ ion-modal{
     width: 30vw;
     margin-bottom: 10px;
     --box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+ion-accordion{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 98%;
+    margin-left: 1%;
+}
+
+.ion-padding{
+    border: solid;
+    border-width: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropTarea{
+    width: 30px;
+    height: 38px;
 }

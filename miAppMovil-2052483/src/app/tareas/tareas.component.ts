@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Tarea } from 'src/Tarea';
 import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
+import { TareasService } from '../tareas.service';
 
 @Component({
   selector: 'app-tareas',
@@ -9,19 +10,23 @@ import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
 })
 export class TareasComponent  implements OnInit {
 
+  constructor(private TareaService: TareasService) { }
+
+  ngOnInit() {
+    this.tareas = this.TareaService.getTareas();
+  }
+
   @ViewChild(AgregarTareaComponent) child: any;
 
   agregarTarea(){
-    this.tareas.push(this.child.newTarea);
+    this.TareaService.agregarTarea(this.child.newTarea);
   }
 
-  constructor() { }
+  tareas : Tarea[] = [];
 
-  ngOnInit() {}
-
-  tareas : Tarea[] = [  ];
-
-  showDetails(description: string){
-    alert(description);
+  dropTarea(note: Tarea){
+    this.TareaService.deleteTarea(note);
+    alert("Se ha eliminado exitosamente la tarea!");
   }
+
 }

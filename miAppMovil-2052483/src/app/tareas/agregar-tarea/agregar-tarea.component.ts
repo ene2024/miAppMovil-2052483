@@ -10,8 +10,8 @@ export class AgregarTareaComponent  implements OnInit {
 
   newTarea: Tarea = {
     Name: '',
-    Month: -1,
-    Year: -1,
+    Month: 0,
+    Year: 0,
     Description: '',
   }
 
